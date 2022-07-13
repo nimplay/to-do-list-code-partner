@@ -32,7 +32,6 @@ const itemLi = (task) => {
   div.appendChild(checkbox);
   itemli.appendChild(textContent);
   itemli.appendChild(btn);
-  textContent.value = task.description;
 
   const styleContent = () => {
     if (checkbox.checked) {
