@@ -1,8 +1,8 @@
 import editData from './edit.js';
 import removeTask from './removeTask.js';
 
-const mainUl = document.querySelector('.item-list');
 const itemLi = (task) => {
+  const mainUl = document.querySelector('.item-list');
   const itemli = document.createElement('li');
   const div = document.createElement('div');
   const checkbox = document.createElement('input');

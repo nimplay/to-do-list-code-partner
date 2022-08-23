@@ -3,9 +3,10 @@ import itemLi from './item.js';
 import getData from './get-task.js';
 
 const toDoTasks = getData();
-const mainContainer = document.querySelector('.container');
 const secondBar = () => {
+  const mainContainer = document.querySelector('.container');
   const form = document.createElement('form');
+  mainContainer.appendChild(form);
   const inputText = document.createElement('input');
   const addBtn = document.createElement('button');
   const error = document.createElement('small');
@@ -16,8 +17,8 @@ const secondBar = () => {
   form.setAttribute('action', 'add-item');
   inputText.setAttribute('type', 'text');
   inputText.setAttribute('placeholder', 'Add to your list');
+  inputText.setAttribute('id', 'imput-text');
   addBtn.setAttribute('type', 'button');
-  mainContainer.appendChild(form);
   form.appendChild(inputText);
   mainContainer.appendChild(error);
   form.appendChild(addBtn);
